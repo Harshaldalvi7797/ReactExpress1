@@ -1,5 +1,7 @@
 import { combineReducers} from "redux";
 
-const reducer=  combineReducers(() =>"hello")
+import {RegisterUser} from "../reducer/user/user";
+
+const reducer=  combineReducers({register: RegisterUser })
 
 export  default reducer;
