@@ -14,13 +14,15 @@ function Header() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link as={Link} to="/home">
+            Home
+          </Nav.Link>
           <Nav.Link href="#link">About US</Nav.Link>
-          <Nav.Link href="#link">SignIn</Nav.Link>
+          {/* <Nav.Link href="#link">SignIn</Nav.Link> */}
           <ButtonToolbar>
-            <Button variant="primary" onClick={() => setModalShow(true)}>
+            {/* <Button variant="primary" onClick={() => setModalShow(true)}>
               Contact Us
-            </Button>
+            </Button> */}
 
             <ExModal show={modalShow} onHide={() => setModalShow(false)} />
           </ButtonToolbar>
@@ -29,9 +31,12 @@ function Header() {
           <Nav.Link as={Link} to="/signup">
             SignUp
           </Nav.Link>
-          <Nav.Link as={Link} to="/login">
+          <Button variant="primary" onClick={() => setModalShow(true)}>
             LogIn
-          </Nav.Link>
+          </Button>
+          {/* <Nav.Link as={Link} to="/login">
+            LogIn
+          </Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

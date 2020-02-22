@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Modal } from "react-bootstrap";
 import { history } from "../../History/history";
 import { Link } from "react-router-dom";
+import Login from "../login/login";
 
 function ExModal(props) {
   const abc = () => {
@@ -18,17 +19,20 @@ function ExModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          SignIn Here
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <h4>Centered Modal</h4>
+        <Login />
         <p>
-          <a className="btn btn-primary" onClick={abc}>
+          {/* <a className="btn btn-primary" onClick={abc}>
             {" "}
             hghgchgf
-          </a>
+          </a> */}
         </p>
+        if not register
+        <Link onClick={abc}>Click</Link>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
